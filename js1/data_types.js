@@ -52,19 +52,23 @@
 // q 3.1
     let word_1 = "велосипед";
     let word_2 = "полезен";
-        console.log(word_1 + " " + word_2);
+
+    console.log(word_1 + " " + word_2);
 
 // q 3.2
     let name = "Всеволод";
     let last_name = "\nСтарозубов";
-        console.log((name.trim() + last_name.trim()).length);
+
+    console.log((name.trim() + last_name.trim()).length);
 
 // q 3.3
     let word = "велосипед";
-        console.log(word.toUpperCase()[0]);
+
+    console.log(word.toUpperCase()[0]);
 
 // q 3.4
     let value = 5.4;
+
     let value_1 = Math.ceil(value);
     let value_2 = Math.floor(value);
     let value_3 = Math.round(value);
@@ -74,46 +78,53 @@
 // q 3.5
     let a = 2;
     let b = 4;
-        console.log((a*b)**2);
+
+    console.log((a * b)**2);
 
 // q 3.6
     a = 3;
     b = 4;
-        console.log(Math.sqrt(a**2 + b**2));
+
+    console.log(Math.sqrt(a**2 + b**2));
 
 // q 3.7
     name = "Анатолий"; 
     last_name = "Максимов"; 
     let age = 32;
-        console.log(`Имя: "${obj.name}" Фамилия: '${obj.last_name}' Возраст: ${obj.age}`);
+
+    console.log(`Имя: "${obj.name}" Фамилия: '${obj.last_name}' Возраст: ${obj.age}`);
 
 // q 3.8
     name = "Анатолий"; 
     last_name = "Максимов"; 
     age = 32;
+
     let obj = {"name": name, "last_name": last_name, "age": age};
         console.log(obj);
 
 // q 3.9
     value = "привет";
+
     if (value == null){
         console.log("null");
-    }
-    else {
+    } else {
         console.log(typeof value);
     }
 
 // q 3.10
     let num_1 = "3";
     let num_2 = "5";
-        console.log(+num_1 + +num_2);
+
+    console.log(+num_1 + +num_2);
 
 // q 3.11
     let size = "500.5%";
-        console.log(parseFloat(size));
+
+    console.log(parseFloat(size));
 
 // q 3.12
     a = "5px";
     b = "7px";
     let c = "10px";
-        console.log(parseFloat(a)*parseFloat(b)*parseFloat(c));
+
+    console.log(parseFloat(a) * parseFloat(b) * parseFloat(c));
