@@ -49,6 +49,7 @@
 
 // q 4.1
     let speed = 60;
+
     if (speed >= 0 && speed <= 30) {
         console.log("Вы едете слишком медленно");
     } else if (speed >= 31 && speed <= 70) {
@@ -59,6 +60,7 @@
 
 // q 4.2
     let price = "12 рублей";
+
     let number = parseInt(price);
     if (isNaN(number)) {
         console.log("Не число");
@@ -70,6 +72,7 @@
 
 // q 4.3
     let a = 32, b = 5, c = 14;
+
     let d = Number(a);
     let e = Number(b);
     let f = Number(c);
@@ -84,6 +87,7 @@
 // q 4.4
     let temp = 25;
     let weather = "clear";
+
     let activity = "";
     if (temp >= 25 && weather == "clear") {
         activity = "golf";
@@ -96,6 +100,7 @@
 // q 4.5
     let word_1 = "машина";
     let word_2 = "стол";
+
     if (word_1.length > word_2.length) {
         console.log(word_1);
     } else {
@@ -107,6 +112,7 @@
 
 // q 4.6
     let task = "переименовать";
+
     switch (task) {
         case "переименовать":
             console.log("rename");
@@ -122,6 +128,7 @@
 // q 4.7
     price = 10000;
     let range = "day";
+
     switch (range) {
         case "day":
             console.log(`${price} Р в день`);
@@ -138,6 +145,7 @@
     a = 2;
     b = 6;
     let sign = "*";
+
     switch (sign) {
         case "+":
             console.log(a + b);
@@ -167,6 +175,7 @@
     a = 2;
     b = 0;
     sign = "/";
+    
     switch (sign) {
         case '+': 
             console.log(a + b);
