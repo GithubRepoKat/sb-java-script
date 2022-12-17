@@ -39,7 +39,7 @@
     function priceMessage (p) {
         return `Данный товар стоит ${p} рублей`;
     }
-    console.log(priceMessage(price)); // Данный товар стоит 80000 рублей
+    console.log(priceMessage(price)); // Ответ: Данный товар стоит 80000 рублей
 
 // q 6.2
     let num_1 = 3;
@@ -56,7 +56,7 @@
         return result;
     }
     let m = mult(num_1, num_2);
-    console.log(m); // 18
+    console.log(m); // Ответ: 18
 
 // q 6.3
     let num = 9;
@@ -65,7 +65,7 @@
         return num*num;
     }
     let result = square();
-    console.log(result); // 81
+    console.log(result); // Ответ: 81
 
 // q 6.4
     num = 2;
@@ -81,7 +81,7 @@
             result = result + " " + num;
         }
     } 
-    console.log(result); // 4 16 256
+    console.log(result); // Ответ: 4 16 256
 
     // Решение от препода:
     function getSquares (n, cnt = 3) {
@@ -111,7 +111,7 @@
             console.log(data);
         }
     }
-    getNumber(data); // 120
+    getNumber(data); // Ответ: 120
 
 // q 6.6
     let value = 4;
@@ -121,4 +121,4 @@
         return value / total * 100;
     }
     let result2 = getPercent(value, total);
-    console.log(result2); // 5
+    console.log(result2); // Ответ: 5
