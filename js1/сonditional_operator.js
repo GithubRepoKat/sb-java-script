@@ -56,7 +56,7 @@
         console.log("Вы едете с нормальной скоростью");
     } else {
         console.log("Вы едете слишком быстро, сбавьте скорость");
-    } // "Вы едете с нормальной скоростью"
+    } // Ответ: "Вы едете с нормальной скоростью"
 
 // q 4.2
     let price = "12 рублей";
@@ -68,7 +68,7 @@
         console.log("Число не корректное");
     } else {
         console.log(number);
-    } // 12
+    } // Ответ: 12
 
 // q 4.3
     let a = 32, b = 5, c = 14;
@@ -82,7 +82,7 @@
         console.log(e);
     } else {
         console.log(f);
-    } // 32
+    } // Ответ: 32
 
 // q 4.4
     let temp = 25;
@@ -95,7 +95,7 @@
         activity = "bowling";
     } else {
         activity = "hiking";
-    } // golf
+    } // Ответ: golf
 
 // q 4.5
     let word_1 = "машина";
@@ -105,7 +105,7 @@
         console.log(word_1);
     } else {
         console.log(word_2);
-    } // машина
+    } // Ответ: машина
 
     // v2
     console.log(word_1.length > word_2.length ? word_1 : word_2);
@@ -123,7 +123,7 @@
         case "редактировать":
             console.log("edit");
         break;
-    } // rename
+    } // Ответ: rename
 
 // q 4.7
     price = 10000;
@@ -139,7 +139,7 @@
         case "week":
             console.log(`${price} Р в неделю`);
         break;
-    } // 10000 Р в день
+    } // Ответ: 10000 Р в день
 
 // q 4.8
     a = 2;
@@ -159,7 +159,7 @@
         case "*":
             console.log(a * b);
         break;
-    } // 10000 Р в день
+    } // Ответ: 12
 
     // v2 
     switch(sign){
@@ -192,7 +192,7 @@
         break;}
             console.log(a / b);
         break;
-    } // Делить на 0 нельзя!
+    } // Ответ: Делить на 0 нельзя!
 
     // v2
     switch (sign && b) {
