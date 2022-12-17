@@ -25,7 +25,7 @@
             total += i;
         }
     }
-    console.log(total);
+    console.log(total); // 30
 
 // q 5.2
     let word = "мир";
@@ -34,7 +34,7 @@
     for (let i = word.length - 1; i >= 0; i--) {
         round += word[i];
     }
-    console.log(round);
+    console.log(round); // рим
 
 // q 5.3
     word = "Доход";
@@ -49,7 +49,7 @@
             console.log("Слово является палиндромом!");
             break;
         }
-    }
+    } // Слово является палиндромом!
 
     // v2
     let word_low = word.toLowerCase();
