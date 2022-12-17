@@ -90,7 +90,7 @@
     list.unshift('Яблоко');
     list.pop();
     list.push('Клубника');
-    console.log(list); // ['Яблоко', 'Груша', 'Клубника']
+    console.log(list); // Ответ: ['Яблоко', 'Груша', 'Клубника']
 
 // q 9.2
     list = ["Груша", "Яблоко"];
@@ -101,7 +101,7 @@
             max = list[i];
         }
     }
-    console.log(max); // Яблоко
+    console.log(max); // Ответ: Яблоко
 
 // q 9.3
     list = [23, 13, 3];
@@ -110,7 +110,7 @@
     for (let i = 0; i < list.length; i++) { 
         sum += list[i];
     }
-    console.log(sum); // 39
+    console.log(sum); // Ответ: 39
 
     // решения от препода
     // v1: for in
@@ -141,7 +141,7 @@
 
     let list_3 = list_1.concat(list_2);
     list_3 = list_3.map(el => el **2);
-    console.log(list_3); // [144, 9, 4, 1]
+    console.log(list_3); // Ответ: [144, 9, 4, 1]
 
 // q 9.5
     list = [12, -4, 5, 32, 2];
@@ -152,7 +152,7 @@
             sum += list[i];
         }
     }
-    console.log(sum); // 51
+    console.log(sum); // Ответ: 51
 
 // q 9.6
     list = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99];
@@ -169,7 +169,7 @@
             sum += i;
         }
     }
-    console.log(sum); // 1060
+    console.log(sum); // Ответ: 1060
 
     //решение задачи от препода:
     list = [];
@@ -198,7 +198,7 @@
     sum = 0; 
     let min = Math.min.apply(null, list); // метод apply устарел
     max = Math.max.apply(null, list);
-    console.log(sum = min * max); // 90
+    console.log(sum = min * max); // Ответ: 90
 
     //Решение от препода:
     // v1
@@ -220,7 +220,7 @@
     for(let i = list.length-1; i >= 0; i--){
         revers.push(list[i]);
     }
-    console.log(revers); // [6, 23, 3, 45, 2]
+    console.log(revers); // Ответ: [6, 23, 3, 45, 2]
 
 // q 9.9
     let sentence = "Завтра будет лучше чем вчера";
@@ -235,7 +235,7 @@
             result[n] += sentence.charAt(i);
         }
     }
-    console.log(result); // ['Завтра', 'будет', 'лучше', 'чем', 'вчера']
+    console.log(result); // Ответ: ['Завтра', 'будет', 'лучше', 'чем', 'вчера']
 
     // Если использовать метод строки split(), то решение будет следующим:
     result = sentence.split(' ');
@@ -263,7 +263,7 @@
         let result = evenNam.length;
         return result;
     }
-    console.log(count(list)); // 2
+    console.log(count(list)); // Ответ: 2
 
 // q 9.11
     list = [2, 45, 3, 23, 6];
@@ -276,7 +276,7 @@
         let num = Math.round(sum / list.length);
         return num;
     }
-    console.log(average(list)); // 16
+    console.log(average(list)); // Ответ: 16
 
 // q 9.12
     list = [2, 54, 2, 54, false, 2]; 
@@ -289,7 +289,7 @@
             break;
         }
     }
-    console.log(sum); // 112
+    console.log(sum); // Ответ: 112
 
     // v2
     for(let i = 0; i < list.length; i++){
@@ -307,7 +307,7 @@
     for (let i = 10; i <= n; i++) {
         list.push(i);
     }
-    console.log(list); // [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+    console.log(list); // Ответ: [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
 
 // q 9.14
     list = [2, "привет", 23, true, 2, false, 2];
@@ -320,7 +320,7 @@
             break;
         }
     }
-    console.log(numbers_list); // [2, 23, 2]
+    console.log(numbers_list); // Ответ: [2, 23, 2]
 
 // q 9.15
     list = ["Лёша", "default", "полке", "клопа", "нашёл"];
@@ -336,7 +336,7 @@
         }
         num = newList.length;
     }
-    console.log(num); // 4
+    console.log(num); // Ответ: 4
 
     //решение задачи от препода:
     let cnt = 0;
@@ -352,7 +352,7 @@
 
     let str = list.map(a => a[0]);
     str = str.join('');
-    console.log(str); // пжаз
+    console.log(str); // Ответ: пжаз
 
     // решение задачи от препода:
     let str2 = "";
@@ -374,7 +374,7 @@
     for (let key in obj) {
         newObj[obj[key]] = (newObj[obj[key]] || 0) + 1;
     }
-    console.log(newObj); // {фрукт: 1, ягода: 2, овощ: 2}
+    console.log(newObj); // Ответ: {фрукт: 1, ягода: 2, овощ: 2}
 
     //решение задачи от препода:
     let hash = {};
@@ -407,7 +407,7 @@
             maxProduct = key.product;
         }
     }
-    console.log(maxProduct); // Strawberry
+    console.log(maxProduct); // Ответ: Strawberry
 
     // //решение задачи от препода:
     max = 0;
