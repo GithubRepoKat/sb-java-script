@@ -55,13 +55,13 @@
         console.log(true);
     } else {
         console.log(false);
-}
+    }  // Ответ: true
 
 // q 1.2
     let greetings = "Приветствую, username! Сегодня вы получили два сообщения от username.";
 
     str = greetings.toLowerCase();
-    console.log(str.lastIndexOf("username"));
+    console.log(str.lastIndexOf("username")); // Ответ: 60
 
 // q 1.3
     let firstDiv = "<div><p>Первый заголовок</p><p>Второй заголовок</p></div>";
@@ -71,14 +71,14 @@
         console.log(true);
     } else {
         console.log(false);
-    }
+    }  // Ответ: true
 
 // q 1.4
     let road = "15 km";
 
     let num = parseFloat(road);
     let result = Number((num * 0.62).toFixed(1));
-    console.log(result);
+    console.log(result);  // Ответ 9.3
 
 // q 1.5
     let words = "Солнечная панель";
@@ -88,7 +88,7 @@
         console.log("В строке больше одного слова");
     } else {
         console.log("В строке одно слово");
-    }
+    } // Ответ: В строке больше одного слова
 
 // q 1.6
     let symbols = "Первый номер";
@@ -98,7 +98,7 @@
         console.log("Первый символ не цифра");
     } else {
         console.log("Первый символ цифра");
-    }
+    } // Ответ: Первый символ не цифра
 
 // q 1.7
     symbols = "floor";
@@ -108,19 +108,19 @@
         console.log(String.fromCodePoint(nam));
     } else {
         console.log("Символ обнаружить не удалось");
-    }
+    } // Ответ: Ò
 
 // q 1.8
     let phone = "+712:34567*8,90";
 
     let tel = phone.replace(/\D/g, '');
-    console.log("+"+tel);
+    console.log("+"+tel); // Ответ: +71234567890
 
 // q 1.9
     let emails = "example@ex.ru primer@primer.com email@com.ru";
 
     let arr = emails.split(/ /);
-    console.log(arr);
+    console.log(arr); // Ответ: ['example@ex.ru', 'primer@primer.com', 'email@com.ru']
 
 // q 1.10
     let ticket = "BM-12234567:RU";
@@ -132,4 +132,4 @@
         console.log("Выбран билет в театр");
     } else {
         console.log("Билет не определен");
-    }
+    } // Ответ: Выбран билет на концерт
