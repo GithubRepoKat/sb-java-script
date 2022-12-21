@@ -123,6 +123,20 @@
     }
     console.log(total); // [100, 196, 25, 39, 64, 101]
 
+    // решение от препода:
+    let numbers1 = layout.match(/\d+/g) || [];
+    numbers1 = numbers1.map(el => {
+        if (el % 2 === 0) {
+            return el ** 2
+        } else {
+            return +el;
+        }
+    })
+    // console.log(numbers1.map(function(el) {
+    //     return +el;
+    // }));
+    console.log(numbers1);
+
 // q 2.4
     let tasks = [
         {title: "Умыться" , completed: true},
@@ -151,6 +165,12 @@
     }
     console.log(val); // [true, 'Числа', 'Объект', 'Не число', false]
 
+    // решение от препода:
+    let start = values.findIndex(el => typeof el === "boolean");
+    let end = values.findLastIndex(el => typeof el === "boolean");
+    let results = values.slice(start, end+1);
+    console.log(results);
+
 // q 2.6
     values = [10, 185, 11200, 980];
 
@@ -172,6 +192,10 @@
     } else {
         console.log("Искомый элемент не был найден"); // Искомый элемент не был найден
     }
+
+    // решение от препода:
+    let index = values.findIndex(el => (el + "").length === 4);
+    console.log(index !== -1 ? index : "Искомый элемент не был найден");
 
 // q 2.8
     let users = [
@@ -249,6 +273,25 @@
         delete obj[key];
     }
     console.log(obj); // {airplane: ['DR578', 'JN1089', 'NDK140'], train: ['AV432', 'FS452', 'OE402']}
+
+    // решение от препода:
+    let obj1 = {};
+    let arr = tickets.split(".")
+    arr = arr.filter(el => {
+        if (el) {
+            return el;
+        }
+    });
+    // console.log("filter", arr);
+    arr = arr.map(el => {
+        return el.split(": ");
+    });
+    // console.log("map", arr);
+    arr.forEach(el => {
+        el[0] = el[0].trim();
+        obj[el[0].toLowerCase()] = el[1].split(", ");
+    });
+    console.log(obj1);
 
 // q 2.14
     let numbers = [10, 20, 33, 55, 100];
