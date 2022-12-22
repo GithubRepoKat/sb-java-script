@@ -95,7 +95,7 @@
             break;
         }
     }
-    console.log(values); // ['Строка', 'Булевый тип', 'Число', 'Объект', 'Не число', false]
+    console.log(values); // Ответ: ['Строка', 'Булевый тип', 'Число', 'Объект', 'Не число', false]
 
 // q 2.2
     let partNumbers = ["ER1234COM", "FIV987451RU","GE123JO","P4321NO"];
@@ -106,7 +106,7 @@
             newNumbers.push(value);  
         }
     }
-    console.log(newNumbers); // ['FIV987451RU', 'GE123JO', 'P4321NO']
+    console.log(newNumbers); // Ответ: ['FIV987451RU', 'GE123JO', 'P4321NO']
 
 // q 2.3
     let layout = "<div>10<span>14<p>25<p>39<p>8<p>101</p></p></p></p></span></div>";
@@ -121,7 +121,7 @@
             total.push(Number(num[i]));
         }
     }
-    console.log(total); // [100, 196, 25, 39, 64, 101]
+    console.log(total); // Ответ: [100, 196, 25, 39, 64, 101]
 
     // решение от препода:
     let numbers1 = layout.match(/\d+/g) || [];
@@ -148,7 +148,7 @@
     for (let i = 0; i < tasks.length; i++) {
         titles.push(tasks[i].title);
     }
-    console.log(titles); // ['Умыться', 'Сделать зарядку', 'Приготовить завтрак']
+    console.log(titles); // Ответ: ['Умыться', 'Сделать зарядку', 'Приготовить завтрак']
 
     // v2
     titles = tasks.map(e => e.title);
@@ -163,7 +163,7 @@
     for (let i = firstI; i <= lastI; i++) {
         val.push(values[i]);
     }
-    console.log(val); // [true, 'Числа', 'Объект', 'Не число', false]
+    console.log(val); // Ответ: [true, 'Числа', 'Объект', 'Не число', false]
 
     // решение от препода:
     let start = values.findIndex(el => typeof el === "boolean");
@@ -179,7 +179,7 @@
     if (charLength.includes(4)) {
         console.log(true);
     } else {
-        console.log(false); // false
+        console.log(false); // Ответ: false
     }
 
 // q 2.7
@@ -190,7 +190,7 @@
     if (charLength2.includes(4)) {
         console.log(charLength2.indexOf(4));
     } else {
-        console.log("Искомый элемент не был найден"); // Искомый элемент не был найден
+        console.log("Искомый элемент не был найден"); // Ответ: Искомый элемент не был найден
     }
 
     // решение от препода:
@@ -207,7 +207,7 @@
     function findSpace(user) {
         return user.role.includes(' ');
     }
-    console.log(users.findIndex(findSpace)); // 1
+    console.log(users.findIndex(findSpace)); // Ответ: 1
 
     // v2
     function userIndex(value) {
@@ -222,7 +222,7 @@
 // q 2.9
     let array = [[1,2,3],[1,2],[1,2,3,4]];
 
-    console.log(array.sort()); // [[1,2],[1,2,3],[1,2,3,4]]
+    console.log(array.sort()); // Ответ: [[1,2],[1,2,3],[1,2,3,4]]
 
 // q 2.10
     let randValues = ["Банан", 3, "Апельсин", 2, "Вишня"];
@@ -233,9 +233,9 @@
         sum += randValues[i];
     }
     if (typeof sum === "number") {
-        console.log(randValues.sort((a, b) => a - b)); // [2, 3, 'Апельсин', 'Банан', 'Вишня']
+        console.log(randValues.sort((a, b) => a - b)); // Ответ 1й вариант: [2, 3, 'Апельсин', 'Банан', 'Вишня']
     } else {
-        console.log(randValues.sort()); // [-100, 4, 23, 34, 432]
+        console.log(randValues.sort()); // Ответ 2й вариант: [-100, 4, 23, 34, 432]
     }
 
 // q 2.11
@@ -250,14 +250,14 @@
         else {
             result[1] +=1;
         }
-    } console.log(result); // [2, 1]
+    } console.log(result); // Ответ: [2, 1]
 
 // q 2.12
     let dates = "23.04.1996 07.10.2002 15.08.1945";
 
     let symbol = dates.replace(/\./g, '/');
     let arrey = symbol.split(' ')
-    console.log(arrey); // ['23/04/1996', '07/10/2002', '15/08/1945']
+    console.log(arrey); // Ответ: ['23/04/1996', '07/10/2002', '15/08/1945']
 
 // q 2.13
     let tickets = "Train: AV432, FS452, OE402. Airplane: DR578, JN1089, NDK140."
@@ -272,7 +272,7 @@
         obj[key.toLowerCase()] = obj[key];
         delete obj[key];
     }
-    console.log(obj); // {airplane: ['DR578', 'JN1089', 'NDK140'], train: ['AV432', 'FS452', 'OE402']}
+    console.log(obj); // Ответ: {airplane: ['DR578', 'JN1089', 'NDK140'], train: ['AV432', 'FS452', 'OE402']}
 
     // решение от препода:
     let obj1 = {};
@@ -304,7 +304,7 @@
             amount +=1;
         }
     }
-    console.log(amount); // 2
+    console.log(amount); // Ответ: 2
 
 // q 2.15
     values = ["100", "30", "Не число", "20", "Тоже не число"];
@@ -317,7 +317,7 @@
             total += Number(values[i]);
         } 
     } 
-    console.log(total); // 150
+    console.log(total); // Ответ: 150
 
 // q 2.16
 let array_1 = [2, 4, 7, 8, 1];
@@ -332,4 +332,4 @@ function intersection (array_1, array_2) {
     }
     return newArray;
 }
-intersection(array_1, array_2); // [2, 1]
+intersection(array_1, array_2); // Ответ: [2, 1]
