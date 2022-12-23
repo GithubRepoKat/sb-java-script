@@ -73,18 +73,14 @@
         ["hireDate","21.10.2015"]
     ];
 
-    for (let i = 0; i < employee.length; i++) {
-        if (employee[i][0] == "hireDate") {
-        employee.pop(employee[i]);
-        }
+    let employeeOne = new Map(employee);
+    employeeOne.delete("hireDate");
+    employeeOne.set("jobName", "IT PROG");
+    let employeeTwo = [];
+    for (let item of employeeOne) {
+        employeeTwo.push(item);
     }
-    for (let i = 0; i < employee.length; i++) {
-        if (employee[i][0] == "hireDate") {
-        employee.pop(employee[i]);
-        }
-    }
-    employee.push(["jobName", "IT PROG"]);
-    console.log(employee); // Ответ: [["firstName","Ivan"],["jobName","IT PROG"]]
+    console.log(employeeTwo); // Ответ: [["firstName","Ivan"],["jobName","IT PROG"]]
 
 // q 3.6
     array = [
