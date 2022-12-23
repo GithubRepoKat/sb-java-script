@@ -76,11 +76,12 @@
     let employeeOne = new Map(employee);
     employeeOne.delete("hireDate");
     employeeOne.set("jobName", "IT PROG");
-    let employeeTwo = [];
+    console.log([...employeeOne.entries()]); // Ответ: [["firstName","Ivan"],["jobName","IT PROG"]]
+    /* let employeeTwo = [];
     for (let item of employeeOne) {
         employeeTwo.push(item);
     }
-    console.log(employeeTwo); // Ответ: [["firstName","Ivan"],["jobName","IT PROG"]]
+    console.log(employeeTwo); */ // длинный вариант вместо строки console.log([...employeeOne.entries()]);
 
 // q 3.6
     array = [
