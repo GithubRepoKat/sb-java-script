@@ -77,11 +77,31 @@
     employeeOne.delete("hireDate");
     employeeOne.set("jobName", "IT PROG");
     console.log([...employeeOne.entries()]); // Ответ: [["firstName","Ivan"],["jobName","IT PROG"]]
+
+    // длинный вариант вместо строки console.log([...employeeOne.entries()]);
     /* let employeeTwo = [];
     for (let item of employeeOne) {
         employeeTwo.push(item);
     }
-    console.log(employeeTwo); */ // длинный вариант вместо строки console.log([...employeeOne.entries()]);
+    console.log(employeeTwo); */ 
+
+    // решение от препода:
+    let str = "hireDate";
+    employee.sort((a,b) => {
+        // console.log(a,b);
+        if (b[0] !== str) {
+            return 1;
+        } else if (a[0] !== str) {
+            return -1;
+        }
+    })
+    if (typeof employee[0] === "object") {
+        while (employee[employee.length - 1][0] === str) {
+            employee.pop();
+        }
+    }
+    employee.push(["jobName", "IT PROG"]);
+    console.log(employee);
 
 // q 3.6
     array = [
@@ -99,7 +119,16 @@
     }
     console.log('Количество строковых элементов в именованном массиве: ' + numStr); // Ответ: Количество строковых элементов в именованном массиве: 1
 
-
-
+    // решение от препода:
+    const countString = function (a) {
+        let cnt = 0;
+        for (let val of a) {
+            if (typeof val[1] === "string") {
+                cnt++;
+            }
+        }
+        console.log(`Количество строковых элементов в именованном массиве: ${cnt}`);
+    }
+    countString(array);
 
 
