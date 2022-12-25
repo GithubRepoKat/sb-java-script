@@ -36,7 +36,7 @@
     pet_1.getName = getName;
     pet_2.getName = getName;
     let result = `${pet_1.getName()}; ${pet_2.getName()}`;
-    console.log(result);
+    console.log(result); // Ответ: Шарик 10; Жучка 5
 
 // q 4.2
     let input = {
@@ -49,7 +49,7 @@
         console.log(`${this.value}, ${this.firstName} ${this.lastName}!`);
     };
 
-    sayHi.bind(input)();
+    sayHi.bind(input)(); // Ответ: Добрый вечер, Григорий Стрельников!
 
 // q 4.3
     let pet = { 
@@ -61,7 +61,7 @@
     }
     
     getDescription = getDescription.bind(pet);
-    getDescription();
+    getDescription(); // Ответ: Имя питомца: Диксон, Порода: Немецкая овчарка
 
 // q 4.4
     let props = { 
@@ -77,7 +77,7 @@
         }
     }
     str = str.slice(0, -2);
-    console.log('Значения свойств объекта props (' + str + ')');
+    console.log('Значения свойств объекта props (' + str + ')'); // Ответ: Значения свойств объекта props (name: Анатолий, age: 29)
 
 
 // q 4.5
@@ -95,4 +95,4 @@
             console.log("Позиция героя: " + this.position);
         }
     };
-    hero.getPosition();
+    hero.getPosition(); // Ответ: Позиция героя: Лагерь
