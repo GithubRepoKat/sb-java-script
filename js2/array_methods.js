@@ -154,7 +154,7 @@
 
     // v2
     /*
-    titles = tasks.map(e => e.title);
+    let titles = tasks.map(e => e.title);
     console.log(titles);
     */
 
