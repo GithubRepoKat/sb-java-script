@@ -67,9 +67,33 @@
         lastName: `${lastName}`,
         get fullName() {
             return `${this.firstName} ${this.lastName}`;
+        },
+        set fullName (str) {
+            let data = str.split(" ");
+            this.firstName = data[0];
+            this.lastName = data[1];
         }
     }
     console.log(user.fullName); // Ответ: Александр Петров
+
+    // решение от препода:
+    /*
+    class Person {
+        constructor(a,b) {
+            this.firstName = a;
+            this.lastName = b;
+        }
+        get fullName () {
+            return `${this.firstName} ${this.lastName}`;
+        }
+        set fullName (str) {
+            let data = str.split(" ");
+            this.firstName = data[0];
+            this.lastName = data[1];
+        }
+    }
+    let user = new Person(firstName, lastName);
+    */
 
 // q 5.4
     let name = "Pizza";
@@ -91,6 +115,18 @@
     }
     let deliveryName = new Delivery(name, phone);
     console.log(deliveryName.getInfo()); // Ответ: false
+
+    // решение от препода:
+    /*
+    class Delivery {
+        constructor(n, p) {
+            this.name = n;
+            this.phone = p;
+            this.validPhone = /^\+/.test(p)
+        }
+    }
+    let deliveryName = new Delivery(name, phone); 
+    */
 
 // q 5.5
     name = "Анатолий";
@@ -114,6 +150,16 @@
     };
     let userPermissions = new User(name);
     console.log(userPermissions.show()); // Ответ: Анатолий false true false false
+
+    // решение от препода:
+    /*
+    class User extends Permissions {
+        constructor(n) {
+            super();
+            this.name = n;
+        }
+    }
+    */
 
 // q 5.6
     let array = [2, 4, 7, 8, 1];
