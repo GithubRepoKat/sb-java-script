@@ -112,28 +112,30 @@
     }
     console.log(sum); // Ответ: 39
 
-    // решения от препода
+    // решения от препода:
+    /*
     // v1: for in
     let arr = [23, 13, 3];
-    sum = 0;
+    let sum = 0;
     for (let k in arr) {
         sum += arr[k];
     }
     console.log(sum);
 
     // v2: for of (Цикл for of работает только для массива, объект с ним работать не сможет!)
-    sum = 0;
+    let sum = 0;
     for (let val of arr) {
         sum += val;
     }
     console.log(sum);
 
     // v3: forEach
-    sum = 0;
+    let sum = 0;
     arr.forEach(function(el) {
         sum += el;
     });
     console.log(sum);
+    */
 
 // q 9.4
     let list_1 = [12, 3];
@@ -172,9 +174,10 @@
     console.log(sum); // Ответ: 1060
 
     //решение задачи от препода:
-    list = [];
+    /*
+    let list = [];
 
-    sum = 0;
+    let sum = 0;
     let n = 0;
     while (n++ < 100) {
         list.push(n);
@@ -191,6 +194,7 @@
         }
     }
     console.log(sum);
+    */
 
 // q 9.7
     list = [2, 45, 3, 23, 6];
@@ -201,6 +205,7 @@
     console.log(sum = min * max); // Ответ: 90
 
     //Решение от препода:
+    /*
     // v1
     let max2 = -Infinity;
     let min2 = Infinity;
@@ -212,6 +217,7 @@
 
     //v2
     console.log(Math.max(...list) * Math.min(...list)); // ... - spread 1,2,3,4,5
+    */
 
 // q 9.8
     list = [2, 45, 3, 23, 6];
@@ -238,10 +244,13 @@
     console.log(result); // Ответ: ['Завтра', 'будет', 'лучше', 'чем', 'вчера']
 
     // Если использовать метод строки split(), то решение будет следующим:
-    result = sentence.split(' ');
+    /*
+    let result = sentence.split(' ');
     console.log(result);
+    */
 
     //решение от препода:
+    /*
     let words = [];
     let word = "";
     for (let i = 0; i < sentence.length; i++){
@@ -254,6 +263,7 @@
     }
     words.push(word);
     console.log(words);
+    */
 
 // q 9.10
     list = [2, 45, 3, 23, 6]; 
@@ -292,6 +302,7 @@
     console.log(sum); // Ответ: 112
 
     // v2
+    /*
     for(let i = 0; i < list.length; i++){
         if(typeof(list[i]) == "boolean"){
             break;
@@ -300,6 +311,7 @@
         }
     }
     console.log(sum);
+    */   
 
 // q 9.13
     n = 20; 
@@ -339,6 +351,7 @@
     console.log(num); // Ответ: 4
 
     //решение задачи от препода:
+    /*
     let cnt = 0;
     for (let val of list) {
         if (val.toLowerCase() !== "default"){
@@ -346,6 +359,7 @@
         }
     }
     console.log(cnt);
+    */
 
 // q 9.16
     list = ["почтовый","желание","абсолютный","закрытый"];
@@ -355,11 +369,13 @@
     console.log(str); // Ответ: пжаз
 
     // решение задачи от препода:
+    /*
     let str2 = "";
     for (let el of list) {
         str2 += el[0];
     }
     console.log(str2);
+    */
 
 // q 9.17
     let obj = {
@@ -377,6 +393,7 @@
     console.log(newObj); // Ответ: {фрукт: 1, ягода: 2, овощ: 2}
 
     //решение задачи от препода:
+    /*
     let hash = {};
     for (let k in obj) {
         if(hash[obj[k]]) {
@@ -391,6 +408,7 @@
     // hash[obj[k]] = result ? ++result : 1;
     }
     console.log(hash);
+    */
 
 // q 9.18
     list = [
@@ -409,9 +427,10 @@
     }
     console.log(maxProduct); // Ответ: Strawberry
 
-    // //решение задачи от препода:
-    max = 0;
-    word = "";
+    //решение задачи от препода:
+    /*
+    let max = 0;
+    let word = "";
     for (let i = 0; i < list.length; i++) {
         // max = Math.max(max, list[i].price);
         if (list[i].price > max) {
@@ -420,3 +439,4 @@
         }
     }
     console.log(word);
+    */
