@@ -108,7 +108,9 @@
     } // Ответ: машина
 
     // v2
+    /*
     console.log(word_1.length > word_2.length ? word_1 : word_2);
+    */
 
 // q 4.6
     let task = "переименовать";
@@ -162,6 +164,7 @@
     } // Ответ: 12
 
     // v2 
+    /*
     switch(sign){
         case "+":
         case "-":
@@ -170,6 +173,7 @@
             console.log(eval(a + sign + b)); // использование eval в JavaScript является небезопасным методом
         break;
     }
+    */
 
 // q 4.9
     a = 2;
@@ -195,6 +199,7 @@
     } // Ответ: Делить на 0 нельзя!
 
     // v2
+    /*
     switch (sign && b) {
         case "/" && 0:
             console.log("Делить на 0 нельзя!");
@@ -203,10 +208,13 @@
             console.log(eval(a + sign + b));  // использование eval в JavaScript является небезопасным методом
         break;
     }
+    */
 
     // v3
+    /*
     if (b == 0 && sign == "/") {
         console.log(`Делить на 0 нельзя!`);
     } else {
         console.log(eval(a + sign + b)); // использование eval в JavaScript является небезопасным методом
     }
+    */
