@@ -83,7 +83,8 @@
     getValue = getValue.call(props); // Ответ: Значения свойств объекта props (name: Анатолий, age: 29)
 
     // решение от препода:
-    /*function getValue() {
+    /*
+    function getValue() {
         let str = "";
         for (let k in this) {
             if (typeof this[k] !== "function") {
@@ -93,7 +94,8 @@
         str = str.slice(0, str.length - 2);
         console.log(`Значения свойств объекта props (${str})`);
     }
-    getValue = getValue.call(props); */
+    getValue = getValue.call(props); 
+    */
 
 // q 4.5
     // вызов с ошибкой:
