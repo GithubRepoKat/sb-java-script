@@ -31,32 +31,36 @@
     let price = 80000;
 
     function priceMessage (price) {
-        console.log(`Данный товар стоит ${price} рублей`); // рекомендуется не писать консоль внутри кода.
+        return `Данный товар стоит ${price} рублей`;
     }
-    priceMessage(price);
+    console.log(priceMessage(price)); // Ответ: Данный товар стоит 80000 рублей
 
     //  Решение от препода:
+    /*
     function priceMessage (p) {
         return `Данный товар стоит ${p} рублей`;
     }
-    console.log(priceMessage(price)); // Ответ: Данный товар стоит 80000 рублей
+    console.log(priceMessage(price)); 
+    */
 
 // q 6.2
     let num_1 = 3;
     let num_2 = 6;
 
     function mult (num_1, num_2) {
-        console.log(num_1 * num_2); // рекомендуется не писать консоль внутри кода.
+        console.log(num_1 * num_2);
     }
-    mult(num_1, num_2);
+    mult(num_1, num_2); // Ответ: 18
 
     //  Решение от препода:
+    /*
     function mult (a, b) {
         let result = a * b;
         return result;
     }
     let m = mult(num_1, num_2);
-    console.log(m); // Ответ: 18
+    console.log(m);
+    */
 
 // q 6.3
     let num = 9;
@@ -84,6 +88,7 @@
     console.log(result); // Ответ: 4 16 256
 
     // Решение от препода:
+    /*
     function getSquares (n, cnt = 3) {
         let result = n;
         let str = "";
@@ -99,6 +104,7 @@
         return str;
     }
     console.log(getSquares(num));
+    */
 
 // q 6.5
     let data = "120";
