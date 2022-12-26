@@ -52,6 +52,7 @@
     } // Ответ: Слово является палиндромом!
 
     // v2
+    /*
     let word_low = word.toLowerCase();
     let result = "";
     for (let i = word_low.length - 1; i >= 0; i--) {
@@ -62,8 +63,10 @@
     } else {
         console.log("Слово не является палиндромом!");
     }
+    */
 
     // v3
+    /*
     let char = Math.floor(word.length / 2);
     let isPalindrom = true;
     for (let i = 0; i < char; i++) {
@@ -73,3 +76,4 @@
         }
     } 
     console.log(isPalindrom ? "Слово является палиндромом!" : "Слово не является палиндромом!");
+    */
