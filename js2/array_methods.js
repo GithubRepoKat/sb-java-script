@@ -124,6 +124,7 @@
     console.log(total); // Ответ: [100, 196, 25, 39, 64, 101]
 
     // решение от препода:
+    /*
     let numbers1 = layout.match(/\d+/g) || [];
     numbers1 = numbers1.map(el => {
         if (el % 2 === 0) {
@@ -136,6 +137,7 @@
     //     return +el;
     // }));
     console.log(numbers1);
+    */
 
 // q 2.4
     let tasks = [
@@ -151,8 +153,10 @@
     console.log(titles); // Ответ: ['Умыться', 'Сделать зарядку', 'Приготовить завтрак']
 
     // v2
+    /*
     titles = tasks.map(e => e.title);
     console.log(titles);
+    */
 
 // q 2.5
     values = ["Строка",true,"Числа","Объект","Не число", false, "Не объект"];
@@ -166,10 +170,12 @@
     console.log(val); // Ответ: [true, 'Числа', 'Объект', 'Не число', false]
 
     // решение от препода:
+    /*
     let start = values.findIndex(el => typeof el === "boolean");
     let end = values.findLastIndex(el => typeof el === "boolean");
     let results = values.slice(start, end+1);
     console.log(results);
+    */
 
 // q 2.6
     values = [10, 185, 11200, 980];
@@ -194,8 +200,10 @@
     }
 
     // решение от препода:
+    /*
     let index = values.findIndex(el => (el + "").length === 4);
     console.log(index !== -1 ? index : "Искомый элемент не был найден");
+    */
 
 // q 2.8
     let users = [
@@ -210,14 +218,18 @@
     console.log(users.findIndex(findSpace)); // Ответ: 1
 
     // v2
+    /*
     function userIndex(value) {
         return value.role.split(/\b\W+\b/).length > 1;
     }
     console.log(users.findIndex(userIndex));
+    */
 
     // v3
+    /*
     let elem = users.find(e => e.role.indexOf(' ') !== -1);
     console.log(users.indexOf(elem));
+    */
 
 // q 2.9
     let array = [[1,2,3],[1,2],[1,2,3,4]];
@@ -275,6 +287,7 @@
     console.log(obj); // Ответ: {airplane: ['DR578', 'JN1089', 'NDK140'], train: ['AV432', 'FS452', 'OE402']}
 
     // решение от препода:
+    /*
     let obj1 = {};
     let arr = tickets.split(".")
     arr = arr.filter(el => {
@@ -292,6 +305,7 @@
         obj[el[0].toLowerCase()] = el[1].split(", ");
     });
     console.log(obj1);
+    */
 
 // q 2.14
     let numbers = [10, 20, 33, 55, 100];
@@ -320,16 +334,16 @@
     console.log(total); // Ответ: 150
 
 // q 2.16
-let array_1 = [2, 4, 7, 8, 1];
-let array_2 = [2, 5, 11, 6, 1];
+    let array_1 = [2, 4, 7, 8, 1];
+    let array_2 = [2, 5, 11, 6, 1];
 
-function intersection (array_1, array_2) {
-    let newArray =[];
-    for (let i = 0; i < array_1.length; i++) {
-        if (array_2.includes(array_1[i]) === true) {
-            newArray.push(array_1[i]);
+    function intersection (array_1, array_2) {
+        let newArray =[];
+        for (let i = 0; i < array_1.length; i++) {
+            if (array_2.includes(array_1[i]) === true) {
+                newArray.push(array_1[i]);
+            }
         }
+        return newArray;
     }
-    return newArray;
-}
-intersection(array_1, array_2); // Ответ: [2, 1]
+    intersection(array_1, array_2); // Ответ: [2, 1]
