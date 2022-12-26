@@ -74,6 +74,7 @@
     }  // Ответ: true
 
     // решение от препода:
+    /*
     let start1 = firstDiv.indexOf("<p>");
     let start2 = firstDiv.lastIndexOf("<p>");
     let end1 = firstDiv.indexOf("</p>");
@@ -82,6 +83,7 @@
     let startFlag = start1 >= 0 && start1 !== start2 && start2 >= 0;
     let endFlag = end1 >= 0 && end1 !== end2 && end2 >= 0;
     console.log(startFlag && endFlag);
+    */
 
 // q 1.4
     let road = "15 km";
@@ -91,9 +93,11 @@
     console.log(result);  // Ответ 9.3
 
     // решение от препода:
+    /*
     let length = +road.split(" ")[0]; // ["15", "km"]
     console.log(length);
     console.log(+(length * 0.62).toFixed(1));
+    */
 
 // q 1.5
     let words = "Солнечная панель";
@@ -138,9 +142,11 @@
     console.log(arr); // Ответ: ['example@ex.ru', 'primer@primer.com', 'email@com.ru']
 
     // решение от препода:
+    /*
     let reg = /[a-z0-9-]+@[a-z]+\.[a-z]{2,3}/gi; // i - ignoring case, g - global
     result = emails.match(reg);
     console.log(result || [""]);
+    */
 
 // q 1.10
     let ticket = "BM-12234567:RU";
@@ -155,6 +161,7 @@
     } // Ответ: Выбран билет на концерт
 
     // решение от препода:
+    /*
     let test1 = /[a-z-]\d{8}\D/i;
     let test2 = /[a-z-]\d{12}\D/i;
     if (test1.test(ticket)) {
@@ -164,3 +171,4 @@
     } else {
         console.log("Билет не определен");
     }
+    */
