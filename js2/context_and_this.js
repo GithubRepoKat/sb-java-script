@@ -70,15 +70,30 @@
         sayHi: ()=>"привет"
     };
     
-    let str = '';
-    for (let key in props) {
-        if (typeof props[key] !== 'function') {
-        str += key +': ' + props[key] + ', ';
+    function getValue() {
+        let str = '';
+        for (let key in props) {
+            if (typeof props[key] !== 'function') {
+            str += key +': ' + props[key] + ', ';
+            }
         }
+        str = str.slice(0, -2);
+        console.log('Значения свойств объекта props (' + str + ')');
     }
-    str = str.slice(0, -2);
-    console.log('Значения свойств объекта props (' + str + ')'); // Ответ: Значения свойств объекта props (name: Анатолий, age: 29)
+    getValue = getValue.call(props); // Ответ: Значения свойств объекта props (name: Анатолий, age: 29)
 
+    // решение от препода:
+    /*function getValue() {
+        let str = "";
+        for (let k in this) {
+            if (typeof this[k] !== "function") {
+                str += `${k}: ${this[k]}, `;
+            }
+        }
+        str = str.slice(0, str.length - 2);
+        console.log(`Значения свойств объекта props (${str})`);
+    }
+    getValue = getValue.call(props); */
 
 // q 4.5
     // вызов с ошибкой:
