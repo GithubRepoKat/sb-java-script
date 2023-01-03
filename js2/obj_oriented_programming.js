@@ -183,3 +183,19 @@
         return sum;
     }
     console.log(minSum(num, array)); // Ответ: 3
+
+    // решение от препода:
+    /*
+    function queue() {
+        let n = arguments[0];
+        let arr = [...arguments];
+        arr.shift();
+        arr.sort((a,b) => a - b);
+        let sum = 0;
+        for (let i = 0; i < n; i++) {
+            sum += arr[i];
+        }
+        return sum;
+    }
+    console.log(queue(num, ...array));
+    */
