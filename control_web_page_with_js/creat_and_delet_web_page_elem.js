@@ -17,20 +17,28 @@
 
 2.6 В HTML-документе заданы теги <p>. Напишите скрипт, который удаляет теги, внутри которых хранится текстовое значение Delete.
 
-2.7 
+2.7 В скрипте объявлен массив values, который состоит из чисел. 
+    В HTML-документе есть множество тегов <p> с классом elems. 
+    Необходимо дописать скрипт так, чтобы он удалил все теги <p> с классом elems, значение которых входит в массив values.
 
-2.8 
+2.8 В HTML-документе заданы два <div> тега с идентификаторами div1 и div2. 
+    Напишите скрипт, который позволит перенести содержимое тега с идентификатором div1 в конец тега с идентификатором div2.
 
-2.9 
+2.9 В HTML-документе есть тег <ul> c идентификатором first. Внутри этого тега есть теги <li>. 
+    Напишите скрипт, который создает новый тег <li> в переменной new_element и добавляет в элемент <ul> с идентификатором first. 
+    После добавления нового элемента выведите в консоль общее количество тегов <li> в теге <ul> с идентификатором first.
 
-2.10 
+2.10 В скрипте объявлена переменная values, которая содержит массив из строк. В HTML-верстке есть два тега <div> с классами div1 и div2. 
+    Допишите скрипт так, чтобы все теги <p> из тега с идентификатором div1, значение которого встречается в списке values, переместились в тег с идентификатором div2.
 
-2.11 
+2.11 В скрипте объявлена переменная task, в которой хранится список из строк. В HTML-верстке есть тег <div> с идентификатором root. 
+    Допишите скрипт так, чтобы на основе значений списка сформировались теги <p> и добавились в элемент с идентификатором root.
 
-2.12
+2.12 Напишите программу, которая считает количество <div>-, <p>- и <h2>-тегов и записывает его в объект tags, как в примере. 
+    Выведите сформированный объект в консоль.
 
-2.13 
-
+2.13 В HTML-документе есть тег <ul> с идентификатором tasks, и внутри него есть несколько тегов <li> с текстом. 
+    Напишите скрипт, который позволяет отсортировать элементы <li> в теге <ul> по длине содержимого.
 */
 
 // q 2.1
@@ -53,20 +61,23 @@
 
 // q 2.4
     let elemDiv = document.querySelectorAll("div");
+
     for (let elem of elemDiv) {
         elem.className = "adds";
     }
 
 // q 2.5
     let paragraph = document.querySelectorAll("p");
-    let numId = 0;
+    let countId = 1;
+
     for (let elem of paragraph) {
-        numId += 1;
-        elem.id = 'p_' + numId;
+        elem.id = 'p_' + countId;
+        countId++;
     }
 
 // q 2.6
     let paragraph2 = document.querySelectorAll('p');
+
     for (let elem of paragraph2) {
         if (elem.textContent === 'Delete') {
             elem.remove();
@@ -74,13 +85,84 @@
     }
 
 // q 2.7
+    const values = [15, 20, 25];
 
+    let paragraph3 = document.querySelectorAll('p');
+
+    for (let i = 0; i < values.length; i++) {
+        for (let j = 0; j < paragraph3.length; j++) {
+            if (String(values[i]) === paragraph3[j].textContent) {
+                paragraph3[j].remove();
+            }
+        }
+    }
 
 // q 2.8
-
+    let div1 = document.querySelector('#div1');
+    let div2 = document.querySelector('#div2');
+    let div1Content = div1.innerHTML;
+    div2.insertAdjacentHTML("beforeend", div1Content);
+    div1.innerHTML = '';
 
 // q 2.9
-
+    let first = document.querySelector('#first');
+    let new_element = document.createElement('li');
+    first.append(new_element);
+    let numberLi = first.querySelectorAll('li');
+    console.log(numberLi.length);
 
 // q 2.10
+    values = ["велосипед", "ролики", "лыжи"];
 
+    let elemDiv1 = document.querySelector('#div1');
+    let elemDiv2 = document.querySelector('#div2');
+    let arrParagraph = elemDiv1.querySelectorAll('p');
+
+    for (let i = 0; i < values.length; i++) {
+        for (let j = 0; j < arrParagraph.length; j++) {
+            if (values[i] === arrParagraph[j].textContent) {
+                elemDiv2.insertAdjacentHTML("afterbegin", '<p>' + arrParagraph[j].textContent + '</p>');
+                arrParagraph[j].remove();
+            }
+        }
+    }
+
+// q 2.11
+    const tasks = ["Проверить документы", "Отправить начальству", "Организовать собрание"];
+
+    let root = document.querySelector('#root');
+    for (let i = 0; i < tasks.length; i++) {
+        let rootParagraph = document.createElement('p');
+        rootParagraph.innerText = tasks[i];
+        root.appendChild(rootParagraph);
+    }
+
+// q 2.12
+    let tags_div = document.querySelectorAll('div');
+    let tags_p = document.querySelectorAll('p');
+    let tags_h2 = document.querySelectorAll('h2');
+    let tags = {};
+
+    tags['div'] = tags_div.length;
+    tags['p'] = tags_p.length;
+    tags['h2'] = tags_h2.length
+
+    console.log(tags);
+
+// q 2.13
+    let tasks1 = document.querySelector('#tasks');
+    let list = tasks1.querySelectorAll('li');
+    let arrText = [];
+
+    for (let i = 0; i < list.length; i++) {
+        arrText.push(list[i].textContent);
+    }
+
+    arrText.sort().reverse();
+    tasks1.innerHTML = '';
+
+    for (let elem of arrText) {
+        let newList = document.createElement('li');
+        newList.innerText = elem;
+        tasks1.appendChild(newList);
+    }
